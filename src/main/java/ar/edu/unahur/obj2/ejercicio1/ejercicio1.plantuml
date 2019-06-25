@@ -1,0 +1,18 @@
+@startuml
+
+    class NotImplementedException {
+        + NotImplementedException()
+    }
+
+    enum Style {
+      BOLD
+      ITALIC
+      UNDERLINE
+    }
+
+
+    class Styler {
+        + apply()
+    }
+
+@enduml

@@ -1,0 +1,55 @@
+@startuml
+
+    interface ChristmasTree {
+        {abstract} + assembly()
+    }
+  
+
+    class PlasticChristmasTree {
+        + assembly()
+    }
+  
+
+    class PlasticChristmasTreeWithBubbleLights {
+        + assembly()
+    }
+  
+    class PlasticChristmasTreeWithGarland {
+        + assembly()
+    }
+  
+    class PlasticChristmasTreeWithGarlandAndBubbleLights {
+        + assembly()
+    }
+  
+    class RealChristmasTree {
+        + assembly()
+    }
+  
+    class RealChristmasTreeWithBubbleLights {
+        + assembly()
+    }
+  
+
+    class RealChristmasTreeWithGarland {
+        + assembly()
+    }
+  
+
+    class RealChristmasTreeWithGarlandAndBubbleLights {
+        + assembly()
+    }
+  
+
+  PlasticChristmasTree .up.|> ChristmasTree
+  PlasticChristmasTreeWithBubbleLights -up-|> PlasticChristmasTree
+  PlasticChristmasTreeWithGarland -up-|> PlasticChristmasTree
+  PlasticChristmasTreeWithGarlandAndBubbleLights -up-|> PlasticChristmasTreeWithGarland
+  RealChristmasTree .up.|> ChristmasTree
+  RealChristmasTreeWithBubbleLights -up-|> RealChristmasTree
+  RealChristmasTreeWithGarland -up-|> RealChristmasTree
+  RealChristmasTreeWithGarlandAndBubbleLights -up-|> RealChristmasTreeWithGarland
+
+
+
+@enduml

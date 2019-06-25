@@ -1,0 +1,36 @@
+@startuml
+
+    class ar.edu.unahur.obj2.ejercicio2.Computer {
+        - computerParts : Map<String, String>
+        - motherboardSetupStatus : List<String>
+        + Computer()
+        + getComputerParts()
+        + getMotherboardSetupStatus()
+    }
+
+  
+    abstract ComputerBuilder {
+        # computerParts : Map<String, String>
+        # motherboardSetupStatus : List<String>
+        {abstract} + buildComputer()
+        # getComputer()
+    }
+  
+
+    class HighEndComputerBuilder {
+        + buildComputer()
+        # addMotherboard()
+        # setupMotherboard()
+        # addProcessor()
+    }
+
+    class StandardComputerBuilder {
+        + buildComputer()
+    }
+
+
+  HighEndComputerBuilder -up-|> ComputerBuilder
+  StandardComputerBuilder -up-|> ComputerBuilder
+
+
+@enduml

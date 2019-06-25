@@ -1,0 +1,39 @@
+@startuml
+
+    class NewsAgency {
+        - news : String
+        + NewsAgency()
+        + setNews()
+    }  
+
+    class NewsChannel10 {
+        - news : String
+        + getNews()
+        + changeNews()
+    }  
+
+    class NewsChannel11 {
+        - news : String
+        + getNews()
+        + setNews()
+    }  
+
+    class NewsPortal {
+        - news : String
+        + getNews()
+        + update()
+    }  
+
+    class Radio900 {
+        - news : String
+        + getNews()
+        + updateNews()
+    }
+  
+
+  NewsAgency o-- NewsChannel10 : newsChannel10
+  NewsAgency o-- NewsChannel11 : newsChannel11
+  NewsAgency o-- NewsPortal : newsPortal
+  NewsAgency o-- Radio900 : radio900
+
+@enduml
