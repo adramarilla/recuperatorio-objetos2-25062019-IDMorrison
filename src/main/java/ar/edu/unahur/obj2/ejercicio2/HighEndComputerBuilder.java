@@ -2,14 +2,6 @@ package ar.edu.unahur.obj2.ejercicio2;
 
 public class HighEndComputerBuilder extends ComputerBuilder {
 
-    public final Computer buildComputer() {
-
-        addMotherboard();
-        setupMotherboard();
-        addProcessor();
-        return getComputer();
-    }
-
     protected void addMotherboard() {
         computerParts.put("Motherboard", "High-end Motherboard");
     }

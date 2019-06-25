@@ -1,6 +1,8 @@
 package ar.edu.unahur.obj2.ejercicio5;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Bank {
 
@@ -12,19 +14,20 @@ public class Bank {
 
     // 5.1
     public Client findClientByDocumentNumber(String documentNumber) {
-        // TODO Completar
-        return null;
+        return clients.stream().filter(client -> client.getDocumentNumber().equals(documentNumber))
+                .findAny().get();
     }
 
     // 5.2
     public Client findRichestClient() {
-        // TODO Completar
-        return null;
+        Comparator<Client> comparator = Comparator.comparing( Client::calcularMontoTotal );
+
+        return clients.stream().max(comparator).get();
     }
 
     // 5.3
     public double calculateTreasure() {
-        // TODO Completar
-        return 0;
+        return clients.stream().map(Client::calcularMontoTotal)
+                .reduce(((aDouble, aDouble2) -> aDouble + aDouble2)).orElse(0.0);
     }
 }

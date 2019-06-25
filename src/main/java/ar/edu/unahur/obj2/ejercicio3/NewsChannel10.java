@@ -1,6 +1,6 @@
 package ar.edu.unahur.obj2.ejercicio3;
 
-public class NewsChannel10 {
+public class NewsChannel10 implements NewsMedia {
 
     private String news;
 
@@ -8,7 +8,7 @@ public class NewsChannel10 {
         return news;
     }
 
-    public void changeNews(String news) {
+    public void updateNews(String news) {
         this.news = news;
     }
 

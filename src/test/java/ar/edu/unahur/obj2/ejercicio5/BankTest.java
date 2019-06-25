@@ -1,5 +1,6 @@
 package ar.edu.unahur.obj2.ejercicio5;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -41,19 +42,19 @@ public class BankTest {
     public void testFindClientByDocumentNumber() {
         Client result = bank.findClientByDocumentNumber("3333");
         // TODO descomentar el assert cuando funcione el método
-        //assertEquals(result, client3);
+        Assert.assertEquals(result, client3);
     }
 
     @Test
     public void testFindRichestClients() {
         Client result = bank.findRichestClient();
         // TODO descomentar el assert cuando funcione el método
-        //assertEquals(result, client2);
+        Assert.assertEquals(result, client2);
     }
 
     @Test
     public void testCalculateTreasure() {
         double treasure = bank.calculateTreasure();
-        //assertEquals(treasure, 210);
+        Assert.assertEquals(treasure, 210.0);
     }
 }

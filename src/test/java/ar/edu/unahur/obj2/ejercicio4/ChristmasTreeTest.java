@@ -14,20 +14,24 @@ public class ChristmasTreeTest {
 
     @Test
     public void testPlasticTreeWithGarland() {
-        PlasticChristmasTreeWithGarland plasticChristmasTree = new PlasticChristmasTreeWithGarland();
-        assertEquals(plasticChristmasTree.assembly(), "Plastic Christmas tree with Garland");
+        PlasticChristmasTree plasticChristmasTree = new PlasticChristmasTree();
+        ExtraGarland extraGarland = new ExtraGarland(plasticChristmasTree);
+        assertEquals(extraGarland.assembly(), "Plastic Christmas tree with Garland");
     }
 
     @Test
     public void testPlasticTreeWithBubbleLights() {
-        PlasticChristmasTreeWithBubbleLights plasticChristmasTree = new PlasticChristmasTreeWithBubbleLights();
-        assertEquals(plasticChristmasTree.assembly(), "Plastic Christmas tree with Bubble Lights");
+        PlasticChristmasTree plasticChristmasTree = new PlasticChristmasTree();
+        ExtraBubbleLights extraBubbleLights = new ExtraBubbleLights(plasticChristmasTree);
+        assertEquals(extraBubbleLights.assembly(), "Plastic Christmas tree with Bubble Lights");
     }
 
     @Test
     public void testPlasticTreeWithGarlandAndBubbleLights() {
-        PlasticChristmasTreeWithGarlandAndBubbleLights plasticChristmasTree = new PlasticChristmasTreeWithGarlandAndBubbleLights();
-        assertEquals(plasticChristmasTree.assembly(), "Plastic Christmas tree with Garland with Bubble Lights");
+        PlasticChristmasTree plasticChristmasTree = new PlasticChristmasTree();
+        ExtraGarland extraGarland = new ExtraGarland(plasticChristmasTree);
+        ExtraBubbleLights extraBubbleLights = new ExtraBubbleLights(extraGarland);
+        assertEquals(extraBubbleLights.assembly(), "Plastic Christmas tree with Garland with Bubble Lights");
     }
 
     @Test
@@ -38,19 +42,23 @@ public class ChristmasTreeTest {
 
     @Test
     public void testRealTreeWithGarland() {
-        RealChristmasTreeWithGarland plasticChristmasTree = new RealChristmasTreeWithGarland();
-        assertEquals(plasticChristmasTree.assembly(), "Real Christmas tree with Garland");
+        RealChristmasTree realChristmasTree = new RealChristmasTree();
+        ExtraGarland extraGarland = new ExtraGarland(realChristmasTree);
+        assertEquals(extraGarland.assembly(), "Real Christmas tree with Garland");
     }
 
     @Test
     public void testRealTreeWithBubbleLights() {
-        RealChristmasTreeWithBubbleLights plasticChristmasTree = new RealChristmasTreeWithBubbleLights();
-        assertEquals(plasticChristmasTree.assembly(), "Real Christmas tree with Bubble Lights");
+        RealChristmasTree realChristmasTree = new RealChristmasTree();
+        ExtraBubbleLights extraBubbleLights = new ExtraBubbleLights(realChristmasTree);
+        assertEquals(extraBubbleLights.assembly(), "Real Christmas tree with Bubble Lights");
     }
 
     @Test
     public void testRealTreeWithGarlandAndBubbleLights() {
-        RealChristmasTreeWithGarlandAndBubbleLights plasticChristmasTree = new RealChristmasTreeWithGarlandAndBubbleLights();
-        assertEquals(plasticChristmasTree.assembly(), "Real Christmas tree with Garland with Bubble Lights");
+        RealChristmasTree realChristmasTree = new RealChristmasTree();
+        ExtraGarland extraGarland = new ExtraGarland(realChristmasTree);
+        ExtraBubbleLights extraBubbleLights = new ExtraBubbleLights(extraGarland);
+        assertEquals(extraBubbleLights.assembly(), "Real Christmas tree with Garland with Bubble Lights");
     }
 }

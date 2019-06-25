@@ -2,12 +2,19 @@ package ar.edu.unahur.obj2.ejercicio2;
 
 public class StandardComputerBuilder extends ComputerBuilder {
 
-    public final Computer buildComputer() {
+    @Override
+    protected void addMotherboard() {
         computerParts.put("Motherboard", "Standard Motherboard");
-        motherboardSetupStatus.add("Screwing the standard motherboard to the case.");
-        motherboardSetupStatus.add("Pluging in the power supply connectors.");
-        computerParts.put("Processor", "Standard Processor");
-        return getComputer();
     }
 
+    @Override
+    protected void setupMotherboard() {
+        motherboardSetupStatus.add("Screwing the standard motherboard to the case.");
+        motherboardSetupStatus.add("Pluging in the power supply connectors.");
+    }
+
+    @Override
+    protected void addProcessor() {
+        computerParts.put("Processor", "Standard Processor");
+    }
 }

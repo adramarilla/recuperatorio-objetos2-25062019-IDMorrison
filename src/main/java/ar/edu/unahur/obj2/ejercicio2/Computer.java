@@ -20,4 +20,6 @@ public class Computer {
     public List<String> getMotherboardSetupStatus() {
         return motherboardSetupStatus;
     }
+
+
 }

@@ -1,6 +1,6 @@
 package ar.edu.unahur.obj2.ejercicio3;
 
-public class Radio900 {
+public class Radio900 implements NewsMedia{
 
     private String news;
 
@@ -11,5 +11,4 @@ public class Radio900 {
     public void updateNews(String news) {
         this.news = news;
     }
-
 }

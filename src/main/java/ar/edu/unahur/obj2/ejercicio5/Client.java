@@ -19,6 +19,11 @@ public class Client {
         this.accounts = accounts;
     }
 
+    public double calcularMontoTotal(){
+        return accounts.stream().map(account -> account.getAmount()).reduce(
+                ((aDouble, aDouble2) -> aDouble + aDouble2)).orElse(0.0);
+    }
+
     public String getId() {
         return id;
     }

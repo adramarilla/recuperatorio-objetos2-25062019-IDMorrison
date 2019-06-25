@@ -10,7 +10,19 @@ public abstract class ComputerBuilder {
     protected Map<String, String> computerParts = new HashMap<>();
     protected List<String> motherboardSetupStatus = new ArrayList<>();
     
-    public abstract Computer buildComputer();
+    public Computer buildComputer(){
+        addMotherboard();
+        setupMotherboard();
+        addProcessor();
+        return getComputer();
+    }
+
+    protected abstract void addProcessor();
+
+    protected abstract void setupMotherboard();
+
+    protected abstract void addMotherboard();
+    
 
 
     protected Computer getComputer() {
