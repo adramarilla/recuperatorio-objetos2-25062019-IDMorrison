@@ -2,7 +2,6 @@ package ar.edu.unahur.obj2.ejercicio5;
 
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Bank {
 
